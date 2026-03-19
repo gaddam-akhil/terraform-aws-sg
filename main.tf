@@ -11,7 +11,6 @@ egress {
   }
 
   tags = merge(
-    var.sg_tags,
     local.common_tags,
     {
         Name = "${var.project}-${var.environment}-${var.sg_name}"
