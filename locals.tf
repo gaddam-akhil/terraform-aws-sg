@@ -4,5 +4,4 @@ locals {
     Environment = var.environment
     Terraform = "true"
   }
-  var.sg_tags
 }

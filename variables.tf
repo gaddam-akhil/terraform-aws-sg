@@ -16,4 +16,5 @@ variable "sg_name" {
 
 variable "sg_tags" {
     type = string
+    default = {}
 }
