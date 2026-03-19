@@ -15,6 +15,6 @@ variable "sg_name" {
 }
 
 variable "sg_tags" {
-    type = string
+    type = map
     default = {}
 }
