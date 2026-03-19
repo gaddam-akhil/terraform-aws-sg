@@ -1,5 +1,5 @@
 resource "aws_security_group" "main" {
-  name        = "${var.project}-${var.environment}-${var.sg_name}" #roboshop-dev-catalogue
+  name        = "${var.project}-${var.environment}-${var.sg_name}" 
   description = "Allow TLS inbound traffic for ${var.project} in ${var.dev} for the component ${var.sg_name}"
   vpc_id      = var.vpc_id
 
@@ -11,6 +11,7 @@ egress {
   }
 
   tags = merge(
+    var.sg_tags,
     local.common_tags,
     {
         Name = "${var.project}-${var.environment}-${var.sg_name}"
